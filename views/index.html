@@ -1,0 +1,50 @@
+$def with(val)
+<!doctype html>
+<html>
+   <head>
+       <meta charset="UTF-8"/>
+      <title>WebApp PROFECO</title>
+   </head>
+   <body bgcolor = "black">
+       <font color="white" face="Comic Sans MS,arial">
+           <table border="5" bordercolor="white" align="center" cellpadding = 5>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Total establecimientos que lo venden</th>
+                </tr>
+            </thead>
+            <tbody>
+                $for producto, numero in val[0].items(): 
+                    <tr>
+                        <td>$producto</td>
+                        <td align="center">$numero</td>
+                    </tr>
+            </tbody>
+           </table>
+        </font>
+       <br></br>
+    <br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+       <font color="white" face="Comic Sans MS,arial">
+           <table border="5" bordercolor="white" align="center" cellpadding = 5>
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Numero de establecimientos</th>
+                </tr>
+            </thead>
+            <tbody>
+                $for ciudad, numero in val[1].items(): 
+                    <tr>
+                        <td>$ciudad</td>
+                        <td align="center">$numero</td>
+                    </tr>
+            </tbody>
+           </table>
+        </font>
+   </body>
+</html>
